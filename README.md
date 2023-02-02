@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-我是 Zoly，一个前端工程师，希望能用学到的技能解决一些实际的问题
+我是 zoly，一个前端工程师，希望能用学到的技能解决一些实际的问题
 
 ## Recently Development Stats
 
