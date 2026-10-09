@@ -8,7 +8,7 @@
     @keyframes fade { to { opacity: 1 } }
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
-  <rect x="0.5" y="0.5" width="539" height="201" rx="4.5" fill="#ffffff" stroke="#e1e4e8"/>
+  <rect width="540" height="202" rx="4.5" fill="#ffffff"/>
   
   <g transform="translate(0, 20)">
     <text class="name fade" x="20" y="9" style="animation-delay:300ms">Ruby</text>
