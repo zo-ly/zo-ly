@@ -12,8 +12,8 @@ const FALLBACK_COLOR = "#8b949e";
 const COLOR_OVERRIDES = { Bash: "#89e051" };
 
 const THEMES = {
-  light: { bg: "#ffffff", border: "#e1e4e8", text: "#333333", muted: "#6a737d" },
-  dark: { bg: "#22272e", border: "#22272e", text: "#c9d1d9", muted: "#8b949e" },
+  light: { bg: "#ffffff", text: "#333333", muted: "#6a737d" },
+  dark: { bg: "#22272e", text: "#c9d1d9", muted: "#8b949e" },
 };
 
 const apiKey = process.env.WAKATIME_API_KEY;
@@ -140,7 +140,7 @@ function render(rows, theme) {
     @keyframes fade { to { opacity: 1 } }
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="4.5" fill="${t.bg}" stroke="${t.border}"/>
+  <rect width="${width}" height="${height}" rx="4.5" fill="${t.bg}"/>
   ${body.join("")}
   ${empty}
 </svg>
