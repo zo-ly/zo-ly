@@ -1,8 +1,4 @@
-## Hi there 👋
-
-我是 zoly，希望能用学到的技能解决一些实际的问题
-
-## Languages · Last 7 days
+## Recently Coding In
 
 ![Weekly Language Stats](https://raw.githubusercontent.com/zo-ly/zo-ly/main/images/wakatime_weekly_language_stats.svg#gh-light-mode-only)
 
