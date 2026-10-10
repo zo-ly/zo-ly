@@ -1,4 +1,4 @@
-// Render the last 7 days of WakaTime stats into light/dark SVG charts.
+// Render the last 7 days of WakaTime stats (headline totals + languages) into light/dark SVG charts.
 // Usage: WAKATIME_API_KEY=... node scripts/wakatime-stats.mjs
 
 import { writeFile } from "node:fs/promises";
@@ -41,6 +41,20 @@ async function getStats() {
 }
 
 const num = (v) => Number(v) || 0;
+
+function duration(seconds) {
+  const minutes = Math.round(num(seconds) / 60);
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return h ? `${h}h ${m}m` : `${m}m`;
+}
+
+// Totals include WakaTime's "Other" (AI session time), since that is real working time.
+function headline(stats) {
+  const parts = ["Last 7 days", `${duration(stats.total_seconds_including_other_language)} total`];
+  if (stats.best_day?.total_seconds) parts.push(`${duration(stats.best_day.total_seconds)} best day`);
+  return parts.join(" · ");
+}
 
 const escapeXml = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -101,7 +115,7 @@ function summarize(stats, colors) {
   return rows.map((r, i) => ({ ...r, percent: percents[i] }));
 }
 
-function render(rows, theme) {
+function render(rows, summary, theme) {
   const t = THEMES[theme];
   const width = 540;
   const pad = 20;
@@ -110,10 +124,11 @@ function render(rows, theme) {
   const barX = pad + nameWidth + 10;
   const barMax = width - barX - percentWidth - pad;
   const rowHeight = 24;
+  const top = pad + 30;
   const maxTotal = Math.max(...rows.map((r) => r.total), 1);
 
   const body = rows.map((r, i) => {
-    const y = pad + i * rowHeight;
+    const y = top + i * rowHeight;
     const color = themedColor(r.color, theme);
     const barWidth = Math.max((r.total / maxTotal) * barMax, 2);
     const delay = 300 + i * 100;
@@ -127,13 +142,14 @@ function render(rows, theme) {
   </g>`;
   });
 
-  const empty = rows.length ? "" : `<text class="empty" x="${pad}" y="${pad + 9}">No coding activity in the last 7 days</text>`;
-  const height = pad * 2 + Math.max(rows.length, 1) * rowHeight - 6;
+  const empty = rows.length ? "" : `<text class="empty" x="${pad}" y="${top + 9}">No coding activity in the last 7 days</text>`;
+  const height = top + pad + Math.max(rows.length, 1) * rowHeight - 6;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <style>
     text { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${t.text}; dominant-baseline: middle }
     .percent { font-weight: 400 }
+    .summary { font-size: 13px; font-weight: 400; fill: ${t.muted} }
     .empty { font-weight: 400; fill: ${t.muted} }
     .fade { opacity: 0; animation: fade 0.5s ease-in-out forwards }
     .bar { transform-box: fill-box; transform-origin: left; animation: grow 0.6s ease-in-out both }
@@ -141,6 +157,7 @@ function render(rows, theme) {
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
   <rect width="${width}" height="${height}" rx="4.5" fill="${t.bg}"/>
+  <text class="summary fade" x="${pad}" y="${pad + 7}" style="animation-delay:150ms">${escapeXml(summary)}</text>
   ${body.join("")}
   ${empty}
 </svg>
@@ -156,7 +173,9 @@ if (!stats) {
 const languages = await get("/program_languages", false).catch(() => []);
 const colors = new Map(languages.map((l) => [l.name, COLOR_OVERRIDES[l.name] ?? l.color]));
 const rows = summarize(stats, colors);
+const summary = headline(stats);
 
-await writeFile(OUT_LIGHT, render(rows, "light"));
-await writeFile(OUT_DARK, render(rows, "dark"));
+await writeFile(OUT_LIGHT, render(rows, summary, "light"));
+await writeFile(OUT_DARK, render(rows, summary, "dark"));
+console.log(summary);
 console.log(rows.map((r) => `${r.name} ${r.percent}%`).join(", "));
