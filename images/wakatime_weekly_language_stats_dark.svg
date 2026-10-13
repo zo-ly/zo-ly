@@ -10,54 +10,54 @@
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
   <rect width="540" height="232" rx="4.5" fill="#22272e"/>
-  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 23h 8m total · 6h 57m best day</text>
+  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 26h 55m total · 6h 57m best day</text>
   
   <g transform="translate(0, 50)">
     <text class="name fade" x="20" y="9" style="animation-delay:300ms">Markdown</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="340.0" height="14" rx="3" fill="#7795cb" style="animation-delay:300ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">34%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">35%</text>
   </g>
   <g transform="translate(0, 74)">
     <text class="name fade" x="20" y="9" style="animation-delay:400ms">Ruby</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="271.7" height="14" rx="3" fill="#b07e7f" style="animation-delay:400ms"/>
+      <rect class="bar" width="236.6" height="14" rx="3" fill="#b07e7f" style="animation-delay:400ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">27%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">25%</text>
   </g>
   <g transform="translate(0, 98)">
     <text class="name fade" x="20" y="9" style="animation-delay:500ms">TypeScript</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="233.1" height="14" rx="3" fill="#3178c6" style="animation-delay:500ms"/>
+      <rect class="bar" width="230.7" height="14" rx="3" fill="#3178c6" style="animation-delay:500ms"/>
     </g>
     <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">24%</text>
   </g>
   <g transform="translate(0, 122)">
-    <text class="name fade" x="20" y="9" style="animation-delay:600ms">JSON</text>
+    <text class="name fade" x="20" y="9" style="animation-delay:600ms">CSS</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="40.5" height="14" rx="3" fill="#898989" style="animation-delay:600ms"/>
+      <rect class="bar" width="54.4" height="14" rx="3" fill="#ab8fc7" style="animation-delay:600ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:600ms">4%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:600ms">5%</text>
   </g>
   <g transform="translate(0, 146)">
-    <text class="name fade" x="20" y="9" style="animation-delay:700ms">CSS</text>
+    <text class="name fade" x="20" y="9" style="animation-delay:700ms">JSON</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="37.2" height="14" rx="3" fill="#ab8fc7" style="animation-delay:700ms"/>
+      <rect class="bar" width="34.1" height="14" rx="3" fill="#898989" style="animation-delay:700ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:700ms">4%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:700ms">3%</text>
   </g>
   <g transform="translate(0, 170)">
     <text class="name fade" x="20" y="9" style="animation-delay:800ms">JavaScript</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="34.7" height="14" rx="3" fill="#f1e05a" style="animation-delay:800ms"/>
+      <rect class="bar" width="31.6" height="14" rx="3" fill="#f1e05a" style="animation-delay:800ms"/>
     </g>
     <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:800ms">3%</text>
   </g>
   <g transform="translate(0, 194)">
     <text class="name fade" x="20" y="9" style="animation-delay:900ms">Other</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="31.1" height="14" rx="3" fill="#8b949e" style="animation-delay:900ms"/>
+      <rect class="bar" width="26.2" height="14" rx="3" fill="#8b949e" style="animation-delay:900ms"/>
     </g>
     <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:900ms">3%</text>
   </g>
