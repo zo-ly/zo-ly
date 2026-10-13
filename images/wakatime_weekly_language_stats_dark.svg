@@ -17,21 +17,21 @@
     <g transform="translate(130, 2)">
       <rect class="bar" width="340.0" height="14" rx="3" fill="#7795cb" style="animation-delay:300ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">33%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">34%</text>
   </g>
   <g transform="translate(0, 74)">
     <text class="name fade" x="20" y="9" style="animation-delay:400ms">Ruby</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="271.7" height="14" rx="3" fill="#b07e7f" style="animation-delay:400ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">26%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">27%</text>
   </g>
   <g transform="translate(0, 98)">
     <text class="name fade" x="20" y="9" style="animation-delay:500ms">TypeScript</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="233.1" height="14" rx="3" fill="#3178c6" style="animation-delay:500ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">22%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">24%</text>
   </g>
   <g transform="translate(0, 122)">
     <text class="name fade" x="20" y="9" style="animation-delay:600ms">JSON</text>
@@ -45,7 +45,7 @@
     <g transform="translate(130, 2)">
       <rect class="bar" width="37.2" height="14" rx="3" fill="#ab8fc7" style="animation-delay:700ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:700ms">3%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:700ms">4%</text>
   </g>
   <g transform="translate(0, 170)">
     <text class="name fade" x="20" y="9" style="animation-delay:800ms">JavaScript</text>
@@ -57,9 +57,9 @@
   <g transform="translate(0, 194)">
     <text class="name fade" x="20" y="9" style="animation-delay:900ms">Other</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="77.3" height="14" rx="3" fill="#8b949e" style="animation-delay:900ms"/>
+      <rect class="bar" width="31.1" height="14" rx="3" fill="#8b949e" style="animation-delay:900ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:900ms">7%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:900ms">3%</text>
   </g>
   
 </svg>
