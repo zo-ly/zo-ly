@@ -7,6 +7,8 @@ const API = "https://api.wakatime.com/api/v1";
 const OUT_LIGHT = "images/wakatime_weekly_language_stats.svg";
 const OUT_DARK = "images/wakatime_weekly_language_stats_dark.svg";
 const MAX_LANGUAGES = 6;
+// Languages with less time than this in the week are dropped, not folded into Other.
+const MIN_SECONDS = 30 * 60;
 const FALLBACK_COLOR = "#8b949e";
 // Colors for languages WakaTime has none for (GitHub linguist colors).
 const COLOR_OVERRIDES = { Bash: "#89e051" };
@@ -102,9 +104,9 @@ function summarize(stats, colors) {
   // entirely; our Other row only holds the languages beyond the top ones.
   const languages = stats.languages
     .filter((l) => l.name !== "Other")
-    .map((l) => ({ name: l.name, total: num(l.total_seconds) }));
+    .map((l) => ({ name: l.name, total: num(l.total_seconds) }))
+    .filter((l) => l.total >= MIN_SECONDS);
   const top = languages
-    .filter((l) => l.total > 0)
     .slice(0, MAX_LANGUAGES)
     .map((l) => ({ ...l, color: colors.get(l.name) }));
   const rest = languages.filter((l) => !top.some((t) => t.name === l.name));
