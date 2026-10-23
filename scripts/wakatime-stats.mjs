@@ -25,7 +25,7 @@ if (!apiKey) {
 }
 
 async function get(path, auth = true) {
-  const headers = auth ? { Authorization: `Basic ${Buffer.from(apiKey).toString("base64")}` } : {};
+  const headers = auth ? { Authorization: `Bearer ${apiKey}` } : {};
   const res = await fetch(`${API}${path}`, { headers });
   if (!res.ok) throw new Error(`GET ${path} -> ${res.status}`);
   return (await res.json()).data;
