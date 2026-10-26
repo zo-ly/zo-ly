@@ -10,28 +10,28 @@
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
   <rect width="540" height="136" rx="4.5" fill="#22272e"/>
-  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 24h 5m total · 6h 10m best day</text>
+  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 25h 34m total · 6h 10m best day</text>
   
   <g transform="translate(0, 50)">
     <text class="name fade" x="20" y="9" style="animation-delay:300ms">TypeScript</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="340.0" height="14" rx="3" fill="#3178c6" style="animation-delay:300ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">58%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">63%</text>
   </g>
   <g transform="translate(0, 74)">
     <text class="name fade" x="20" y="9" style="animation-delay:400ms">Ruby</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="126.7" height="14" rx="3" fill="#b07e7f" style="animation-delay:400ms"/>
+      <rect class="bar" width="111.7" height="14" rx="3" fill="#b07e7f" style="animation-delay:400ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">21%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">20%</text>
   </g>
   <g transform="translate(0, 98)">
     <text class="name fade" x="20" y="9" style="animation-delay:500ms">Markdown</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="120.2" height="14" rx="3" fill="#7795cb" style="animation-delay:500ms"/>
+      <rect class="bar" width="89.5" height="14" rx="3" fill="#7795cb" style="animation-delay:500ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">20%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">16%</text>
   </g>
   
 </svg>
