@@ -10,7 +10,7 @@
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
   <rect width="540" height="208" rx="4.5" fill="#22272e"/>
-  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 24h 3m total · 5h 48m best day</text>
+  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 24h 7m total · 5h 48m best day</text>
   
   <g transform="translate(0, 50)">
     <text class="name fade" x="20" y="9" style="animation-delay:300ms">TypeScript</text>
