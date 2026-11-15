@@ -10,28 +10,28 @@
     @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
   </style>
   <rect width="540" height="208" rx="4.5" fill="#22272e"/>
-  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 21h 15m total · 7h 2m best day</text>
+  <text class="summary fade" x="20" y="27" style="animation-delay:150ms">Last 7 days · 22h 37m total · 7h 2m best day</text>
   
   <g transform="translate(0, 50)">
     <text class="name fade" x="20" y="9" style="animation-delay:300ms">Ruby</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="340.0" height="14" rx="3" fill="#b07e7f" style="animation-delay:300ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">38%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:300ms">36%</text>
   </g>
   <g transform="translate(0, 74)">
     <text class="name fade" x="20" y="9" style="animation-delay:400ms">Markdown</text>
     <g transform="translate(130, 2)">
-      <rect class="bar" width="223.8" height="14" rx="3" fill="#7795cb" style="animation-delay:400ms"/>
+      <rect class="bar" width="282.3" height="14" rx="3" fill="#7795cb" style="animation-delay:400ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">25%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:400ms">30%</text>
   </g>
   <g transform="translate(0, 98)">
     <text class="name fade" x="20" y="9" style="animation-delay:500ms">TypeScript</text>
     <g transform="translate(130, 2)">
       <rect class="bar" width="183.1" height="14" rx="3" fill="#3178c6" style="animation-delay:500ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">21%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:500ms">19%</text>
   </g>
   <g transform="translate(0, 122)">
     <text class="name fade" x="20" y="9" style="animation-delay:600ms">YAML</text>
@@ -52,7 +52,7 @@
     <g transform="translate(130, 2)">
       <rect class="bar" width="43.2" height="14" rx="3" fill="#3572A5" style="animation-delay:800ms"/>
     </g>
-    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:800ms">5%</text>
+    <text class="percent fade" x="520" y="9" text-anchor="end" style="animation-delay:800ms">4%</text>
   </g>
   
 </svg>
